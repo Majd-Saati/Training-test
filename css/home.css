@@ -1,0 +1,30 @@
+/* ============================================
+   home.css — تنسيقات خاصة بالصفحة الرئيسية
+   ============================================ */
+
+/* قسم الهيرو الرسمي */
+.hero {
+  background-color: var(--brand);
+  background-image: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #fff;
+  padding: 5rem 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+.hero .btn-light {
+  border-radius: 2px;
+}
+
+/* بطاقات روابط الأقسام */
+.page-link-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+/* استجابة */
+@media (max-width: 576px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+}

@@ -1,0 +1,118 @@
+/* ============================================
+   base.css — تنسيقات مشتركة بين جميع الصفحات
+   (المتغيرات، الخطوط، التنقل، الأزرار، البطاقات،
+    الفوتر، الوضع الليلي)
+   ============================================ */
+
+:root {
+  --brand: #1f3a5f;        /* كحلي رسمي */
+  --brand-dark: #142943;
+  --accent: #b08d57;       /* ذهبي هادئ */
+  --bg-soft: #f4f5f7;
+  --text-main: #1c2733;
+  --text-soft: #5b6772;
+  --border-soft: #e2e6ea;
+}
+
+/* ---- الخطوط الرسمية ---- */
+body {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--bg-soft);
+  color: var(--text-main);
+  line-height: 1.9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand, .post-title {
+  font-family: "Amiri", "Tajawal", serif;
+  font-weight: 700;
+}
+
+/* ---- شريط التنقل ---- */
+.navbar {
+  background-color: var(--brand) !important;
+  border-bottom: 3px solid var(--accent);
+}
+.navbar-brand {
+  letter-spacing: 0.5px;
+  font-size: 1.4rem;
+}
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* ---- الأزرار ---- */
+.btn-brand {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+  border-radius: 2px;
+}
+.btn-brand:hover {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #fff;
+}
+
+/* ---- البطاقات (مشتركة) ---- */
+.card {
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(31, 58, 95, 0.12);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-date {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+/* وسم التصنيف */
+.badge-cat {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 0.4em 0.8em;
+}
+
+/* ---- الفوتر ---- */
+footer {
+  background-color: var(--brand-dark);
+  color: #c9d2dc;
+  border-top: 3px solid var(--accent);
+}
+footer a {
+  color: #c9d2dc;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
+
+/* ============================================
+   الوضع الليلي (مشترك)
+   ============================================ */
+body.dark-mode {
+  background-color: #14202e;
+  color: #dfe6ee;
+}
+body.dark-mode .card {
+  background-color: #1c2c3e;
+  color: #dfe6ee;
+  border-color: #2a3c52;
+}
+body.dark-mode .card-date,
+body.dark-mode .text-muted {
+  color: #9fb0c2 !important;
+}
+body.dark-mode .bg-light {
+  background-color: #1c2c3e !important;
+}

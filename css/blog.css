@@ -1,0 +1,31 @@
+/* ============================================
+   blog.css — تنسيقات خاصة بصفحة المدونة
+   (الباجينيشن أساسًا)
+   ============================================ */
+
+.pagination .page-link {
+  color: var(--brand);
+  border-radius: 2px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.pagination .page-item.active .page-link {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.pagination .page-link:hover {
+  background-color: var(--bg-soft);
+}
+
+/* الوضع الليلي للباجينيشن */
+body.dark-mode .pagination .page-link {
+  background-color: #1c2c3e;
+  border-color: #2a3c52;
+  color: #dfe6ee;
+}
+body.dark-mode .pagination .page-item.active .page-link {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
